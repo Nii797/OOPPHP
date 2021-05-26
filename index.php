@@ -1,3 +1,4 @@
+<!-- MENAMBAHKAN INHERITANCE -->
 <?php require_once('data.php') ?>
 <!-- memanggil private static didalam menu -->
 <?php require_once('menu.php') ?>
