@@ -11,21 +11,25 @@
 <body>
   <div class="order-wrapper">
     <h2>Keranjang</h2>
+    <!-- Deklarasikan variable $totalPayment -->
+    <?php $totalPayment = 0 ?>
+    
     <?php foreach ($menus as $menu): ?>
       <?php 
         $orderCount = $_POST[$menu->getName()];
-        // Atur property orderCount milik $menu ke $orderCount menggunakan method setOrderCount
         $menu->setOrderCount($orderCount);
-        
+        // Tingkatkan variabel $totalPayment
+        $totalPayment += $menu->getTotalPrice();
       ?>
       <p class="order-amount">
         <?php echo $menu->getName() ?>
         x
         <?php echo $orderCount ?>
-      </p><br>
-      <!-- Panggil method getTotalPrice menggunakan $menu dan cetak harga total -->
+      </p>
       <p class="order-price">$<?php echo $menu->getTotalPrice() ?></p>
     <?php endforeach ?>
+    <!-- Cetak variabel $totalPayment -->
+    <h3>Harga total: $<?php echo $totalPayment ?></h3>
   </div>
 </body>
 </html>
