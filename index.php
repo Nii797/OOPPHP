@@ -13,8 +13,10 @@
 <body>
   <div class="menu-wrapper container">
     <h1 class="logo">Café Progate</h1>
+
     <!-- Cetak property $count milik class Menu -->
-    <h3>Jumlah item: <?php echo Menu::$count ?></h3>
+    <h3>Jumlah item: <?php echo Menu::getCount() ?></h3>
+    
     <form method="post" action="confirm.php">
       <div class="menu-items">
         <?php foreach ($menus as $menu): ?>

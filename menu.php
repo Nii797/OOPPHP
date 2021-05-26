@@ -6,12 +6,19 @@ class Menu {
   private $orderCount = 0;
 
   // penambahan property class public yang disebut $count dengan nilai awal 4
-  public static $count = 4;
+  // public static $count = 4;
   
+  // Method Class menggunakan self dan private agar tidak bisa diakses diluar Class
+  private static $count = 0;
+
+
   public function __construct($name, $price, $image) {
     $this->name = $name;
     $this->price = $price;
     $this->image = $image;
+
+    // count menggunakan self
+    self::$count++;
   }
   
   public function hello() {
@@ -43,5 +50,9 @@ class Menu {
     return $this->getTaxIncludedPrice() * $this->orderCount;
   }
   
+  // method class yang disebut getCount
+  public static function getCount() {
+    return self::$count;
+  }
 }
 ?>
