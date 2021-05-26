@@ -4,6 +4,9 @@ class Menu {
   private $price;
   private $image;
   private $orderCount = 0;
+
+  // penambahan property class public yang disebut $count dengan nilai awal 4
+  public static $count = 4;
   
   public function __construct($name, $price, $image) {
     $this->name = $name;

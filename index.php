@@ -1,4 +1,6 @@
 <?php require_once('data.php') ?>
+<!-- memanggil private static didalam menu -->
+<?php require_once('menu.php') ?>
 
 <!DOCTYPE html>
 <html>
@@ -11,6 +13,8 @@
 <body>
   <div class="menu-wrapper container">
     <h1 class="logo">Café Progate</h1>
+    <!-- Cetak property $count milik class Menu -->
+    <h3>Jumlah item: <?php echo Menu::$count ?></h3>
     <form method="post" action="confirm.php">
       <div class="menu-items">
         <?php foreach ($menus as $menu): ?>
