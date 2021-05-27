@@ -1,4 +1,5 @@
-<!-- PARENT -->
+<!-- KOSTOMISASI CLASS FOOD -->
+<!-- MENAMBHKAN LEVEL KEPEDASAN PADA MAKANAN -->
 <?php 
 require_once('data.php');
 require_once('menu.php');
@@ -30,6 +31,8 @@ require_once('menu.php');
             <!-- Gunakan statement if untuk memanggil method getType ketika $menu adalah instance dari class Drink -->            
             <?php if ($menu instanceof Drink): ?>
               <p class="menu-item-type"><?php echo $menu->getType() ?></p>
+            <?php else: ?>
+              <p class="menu-item-type">Level Kepedasan : <?php echo $menu->getSpice() ?></p>  
             <?php endif ?>
 
             <p class="price">$<?php echo $menu->getTaxIncludedPrice() ?> (termasuk pajak)</p>

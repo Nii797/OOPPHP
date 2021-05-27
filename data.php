@@ -13,18 +13,13 @@ require_once('food.php');
 // tambah argument 'dingin' dan 'panas' untuk menambahkan type
 $juice = new Drink('JUS',6,'img/juice.png','dingin');
 $coffee = new Drink('KOPI',5,'img/coffee.png','panas');
-// $thaitea = new Drink('THAI-TEA',3,'img/Thai-Tea.png','dingin');
+$thaitea = new Drink('THAI-TEA',3,'img/Thai-Tea.png','dingin');
 
 // minuman
-$curry = new Food('GULAI',9,'img/curry.png');
-$pasta = new Food('PASTA',12,'img/pasta.png');
-// $sate = new Food('SATE',6,'img/sate.png');
+$curry = new Food('GULAI',9,'img/curry.png',2);
+$pasta = new Food('PASTA',12,'img/pasta.png',3);
+$sate = new Food('SATE',6,'img/sate.png',1);
 
-// HAPUS SUDAH TIDAK DIBUTUHKAN KARENA SUDAH ADA ARGUMRNT TYPE PADA SUBCLASS
-// menambahkan type makanan di import drink.php
-// $juice->setType('dingin');
-// $coffee->setType('panas');
-
-$menus = array($juice, $coffee, $curry, $pasta);
+$menus = array($juice, $coffee, $thaitea, $curry, $pasta, $sate);
 
 ?>
