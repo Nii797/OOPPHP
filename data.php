@@ -7,15 +7,22 @@ require_once('drink.php');
 require_once('food.php');
 
 
-// Drink atau warisan dari Menu child Food
-$juice = new Drink('JUS', 6, 'https://s3-ap-northeast-1.amazonaws.com/progate/shared/images/lesson/php/juice.png');
-$coffee = new Drink('KOPI', 5, 'https://s3-ap-northeast-1.amazonaws.com/progate/shared/images/lesson/php/coffee.png');
+// warisan dari Menu child Food dan Drink
 
+// makanan 
+$juice = new Drink('JUS',6,'img/juice.png');
+$coffee = new Drink('KOPI',5,'img/coffee.png');
+$thaitea = new Drink('THAI-TEA',3,'img/Thai-Tea.png');
 
+// minuman
+$curry = new Food('GULAI',9,'img/curry.png');
+$pasta = new Food('PASTA',12,'img/pasta.png');
+$sate = new Food('SATE',6,'img/sate.png');
+
+// menambahkan type makanan di import drink.php
 $juice->setType('dingin');
 $coffee->setType('panas');
 
-
-$menus = array($juice, $coffee);
+$menus = array($juice, $coffee, $curry, $pasta, $thaitea, $sate);
 
 ?>

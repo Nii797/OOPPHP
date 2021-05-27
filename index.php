@@ -1,4 +1,4 @@
-<!-- INSTANCEOF (MEMISAHKAN CODE BERDASARKAN CLASS) -->
+<!-- PROTECTED (OVERRIDING) -->
 <?php require_once('data.php') ?>
 <!-- memanggil private static didalam menu -->
 <?php require_once('menu.php') ?>
@@ -13,10 +13,10 @@
 </head>
 <body>
   <div class="menu-wrapper container">
-    <h1 class="logo">Café Progate</h1>
+    <h1 class="logo">Selamat Datang di Cafe Soni</h1>
 
     <!-- Cetak property $count milik class Menu -->
-    <h3>Jumlah item: <?php echo Menu::getCount() ?></h3>
+    <h3>Jumlah Menu : <?php echo Menu::getCount() ?></h3>
     
     <form method="post" action="confirm.php">
       <div class="menu-items">
@@ -24,8 +24,13 @@
           <div class="menu-item">
             <img src="<?php echo $menu->getImage() ?>" class="menu-item-image">
             <h3 class="menu-item-name"><?php echo $menu->getName() ?></h3>
-            <!-- Cetak property type menggunakan method getter $menu -->
-            <p class="menu-item-type"><?php echo $menu->getType() ?></p>
+
+            <!-- terbaru -->
+            <!-- Gunakan statement if untuk memanggil method getType ketika $menu adalah instance dari class Drink -->            
+            <?php if ($menu instanceof Drink): ?>
+              <p class="menu-item-type"><?php $menu->getType() ?></p>
+            <?php endif ?>
+
             <p class="price">$<?php echo $menu->getTaxIncludedPrice() ?> (termasuk pajak)</p>
             <span>Qty: </span>
             <input type="text" value="0" name="<?php echo $menu->getName() ?>">
