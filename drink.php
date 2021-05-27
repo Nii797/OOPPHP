@@ -11,10 +11,16 @@ class Drink extends Menu {
     // dan memanggil variabel pada menu seperti name, price, image,
     // dan sebagai tambahan ada di sub class adalah type 
     public function __construct($name, $price, $image, $type) {
-        $this->name = $name;
-        $this->price = $price;
-        $this->image = $image;
+        // DIHAPUS DIUBAH MENJADI PEMANGGILAN KE CONSTRUCTOR INDUK ATAU KE METHOD INDUK
+        // $this->name = $name;
+        // $this->price = $price;
+        // $this->image = $image;
+        // $this->type = $type;
+
+        // Panggil constructor class induk dan tetapkan argumentnya
+        parent::__construct($name, $price, $image, $type);
         $this->type = $type;
+
     }
 
     // Definisikan method getType
