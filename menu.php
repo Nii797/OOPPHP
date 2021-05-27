@@ -1,15 +1,24 @@
 <?php
 class Menu {
-  private $name;
-  private $price;
-  private $image;
-  private $orderCount = 0;
+
+  // class public bisa diakses disemua class
+  // class private adalah clas dinama bisa diakses hanya ke class yang sama
+  // sedangkan jikalau protected bisa diakses ke sub class atau class anak
+
+  // BARU 
+  // ubah property name, price, dan image menjadi protected agar bisa diubah di sub class
+  // atau class anak
+
+  protected $name;
+  protected $price;
+  protected $image;
+  protected $orderCount = 0;
 
   // penambahan property class public yang disebut $count dengan nilai awal 4
   // public static $count = 4;
   
   // Method Class menggunakan self dan private agar tidak bisa diakses diluar Class
-  private static $count = 0;
+  protected static $count = 0;
 
 
   public function __construct($name, $price, $image) {
