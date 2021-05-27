@@ -1,4 +1,4 @@
-<!-- PROPERTY & INDEPENDENT (MENAMBAHKAN TYPE MAKANAN) -->
+<!-- INSTANCEOF (MEMISAHKAN CODE BERDASARKAN CLASS) -->
 <?php require_once('data.php') ?>
 <!-- memanggil private static didalam menu -->
 <?php require_once('menu.php') ?>
@@ -24,6 +24,8 @@
           <div class="menu-item">
             <img src="<?php echo $menu->getImage() ?>" class="menu-item-image">
             <h3 class="menu-item-name"><?php echo $menu->getName() ?></h3>
+            <!-- Cetak property type menggunakan method getter $menu -->
+            <p class="menu-item-type"><?php echo $menu->getType() ?></p>
             <p class="price">$<?php echo $menu->getTaxIncludedPrice() ?> (termasuk pajak)</p>
             <span>Qty: </span>
             <input type="text" value="0" name="<?php echo $menu->getName() ?>">
