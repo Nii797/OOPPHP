@@ -1,7 +1,7 @@
-<!-- PROTECTED (OVERRIDING) -->
-<?php require_once('data.php') ?>
-<!-- memanggil private static didalam menu -->
-<?php require_once('menu.php') ?>
+<?php 
+require_once('data.php');
+require_once('menu.php');
+?>
 
 <!DOCTYPE html>
 <html>
@@ -28,7 +28,7 @@
             <!-- terbaru -->
             <!-- Gunakan statement if untuk memanggil method getType ketika $menu adalah instance dari class Drink -->            
             <?php if ($menu instanceof Drink): ?>
-              <p class="menu-item-type"><?php $menu->getType() ?></p>
+              <p class="menu-item-type"><?php echo $menu->getType() ?></p>
             <?php endif ?>
 
             <p class="price">$<?php echo $menu->getTaxIncludedPrice() ?> (termasuk pajak)</p>

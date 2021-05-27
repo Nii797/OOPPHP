@@ -18,13 +18,13 @@ $coffee = new Drink('KOPI',5,'img/coffee.png','panas');
 // minuman
 $curry = new Food('GULAI',9,'img/curry.png');
 $pasta = new Food('PASTA',12,'img/pasta.png');
-$sate = new Food('SATE',6,'img/sate.png');
+// $sate = new Food('SATE',6,'img/sate.png');
 
 // HAPUS SUDAH TIDAK DIBUTUHKAN KARENA SUDAH ADA ARGUMRNT TYPE PADA SUBCLASS
 // menambahkan type makanan di import drink.php
 // $juice->setType('dingin');
 // $coffee->setType('panas');
 
-$menus = array($juice, $coffee, $curry, $pasta, $sate);
+$menus = array($juice, $coffee, $curry, $pasta);
 
 ?>
